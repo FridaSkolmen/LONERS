@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIS chat applikation</title>
+</head>
+    <link rel="stylesheet" href="/signup.css">
+<body>
+    <div> 
+    </div>
+    <h1>Chat med dine venner her!</h1>
+    <div id="chatters"></div>
+    <h2>Skriv en besked: </h2>
+    <form action="javascript:void(0)" id="chatForm">
+      <input type="text" name="message" id="message">
+      <input type="submit" value="Send">
+    </form>
+    <div id="messagesContainer"></div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/homepage.js"></script>
+    
