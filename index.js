@@ -1,21 +1,32 @@
 // Jeg importerer de forskellige liberies
 const express = require("express")
 const sqlite3 = require('sqlite3').verbose();
+const http = require("http");
+const https = require('https');
 var crypto = require('crypto');
 const session = require("express-session");
 const bodyParser = require("body-parser");
 const path = require('path');
 const fs = require('fs');
 
+// Læser TLS certifikaterne and key fra fil sytemerne.
+const options = {
+  key: fs.readFileSync('dis-key.pem'),
+  cert: fs.readFileSync('dis-cert.pem'),
+  rejectUnathorized: false,
+};
+
 // Gør det til en express applikation og konfigurerer til at bruge de statiske filer fra Views
 app = express();
 app.use(express.static(__dirname + '/Views'))
 
-// Opretter en http-server det lytter til port 3000
-const server = require("http").createServer(app);
+// Opretter en https-server det lytter til port 3000
+const server = https.createServer(options, app);
+
 server.listen(3000, function(){
   console.log('Server started on port 3000')
 });
+
 
 //Opretter en database med SQLite
 const db = new sqlite3.Database('./db.sqlite');
@@ -218,11 +229,6 @@ io.on('connection', function(socket){
   });
 });
 
-// Læser TLS certifikaterne and key fra fil sytemerne.
-const options = {
-  key: fs.readFileSync('dis-key.pem'),
-  cert: fs.readFileSync('dis-cert.pem'),
-  rejectUnathorized: false,
-};
+
 
 
