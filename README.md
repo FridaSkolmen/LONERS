@@ -11,3 +11,5 @@ Indtast IP-adressen i browseren og udforsk LONERS
 
 Eller kør den på lokalhost:
 - https://localhost:3000
+
+
