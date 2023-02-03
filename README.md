@@ -1,7 +1,10 @@
-Hej og velkommen til...
+Hej og velkommen til LONERS!
 
-For at kunne eksekvere webapplikationen skal nedenstående kører i terminalen:
+For at kunne eksekvere webapplikationen skal nedenstående først køres i terminalen:
 - npm install
-- npm install express
-- npm install express-session
-- node / nodemon index.js
+    - Evt også hent sqlite,hvsi den driller
+    - npm install sqlite3
+- Projektet kan hernæst køres med: node / nodemon index.js
+
+Indtast IP-adressen i browseren og udforsk LONERS
+- IP-adresse: http://138.68.134.109
