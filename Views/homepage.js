@@ -1,5 +1,5 @@
 $(document).ready(function(){ //Anvender jQuery biblioteket til at kører funktionen når dokumentet er klart
-  var socket = io.connect('http://localhost:3000');//Connecter klient-siden til vores web-socket server der kører på denne IP-adresse
+  var socket = io.connect('https://loners.info');//Connecter klient-siden til vores web-socket server der kører på denne IP-adresse
   var username = prompt("Hvad skal dit kaldenavn i LONERS være?");//Laver en popUp-besked til user og efterspørger et kaldenavn
   socket.emit('join', username);//Fortæller serveren at en ny user har joinet og vedhæfter username
   
