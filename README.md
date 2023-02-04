@@ -7,7 +7,7 @@ For at kunne eksekvere webapplikationen skal nedenstående først køres i termi
 - Projektet kan hernæst køres med: node / nodemon index.js
 
 Indtast IP-adressen i browseren og udforsk LONERS
-- IP-adresse: http://138.68.134.109
+- IP-adresse: http://167.99.133.207
 
 Eller kør den på lokalhost:
 - https://localhost:3000

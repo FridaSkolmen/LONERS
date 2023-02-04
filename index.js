@@ -196,7 +196,7 @@ const addMessageToDatabase = (message) => {
 //https://socket.io/docs/v3/handling-cors/
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://138.68.134.109", //Denne IP kan oprette forbindelse til serveren
+    origin: "http://167.99.133.207/", //Denne IP kan oprette forbindelse til serveren
     optionsSuccessStatus: 200,
     credentials: true,
     methods: ["GET", "POST"] //Tillader metoderne GET og POST i CORS-forespørgslerne
